@@ -34,6 +34,7 @@
   services = {
     xserver = {
       enable = true;
+      desktopManager.plasma5.enable = true;
       displayManager = {
         autoLogin.enable = true;
         autoLogin.user = "mro";
