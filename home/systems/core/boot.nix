@@ -7,13 +7,13 @@
   # Implements Grub for EFI machines.
   boot.loader = {
     efi = {
-      canTouchEfiVariables = true;
+      # canTouchEfiVariables = true;
       efiSysMountPoint = "/boot";
     };
     grub = {
       enable = true;
       devices = ["nodev"];
-      # efiInstallAsRemovable = true;
+      efiInstallAsRemovable = true;
       efiSupport = true;
       useOSProber = true;
     };

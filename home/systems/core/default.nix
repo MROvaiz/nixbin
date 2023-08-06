@@ -9,7 +9,7 @@
     "${self}/home/systems/core/boot.nix" # Boot
     "${self}/home/systems/core/extra.nix" # Extra packages
     "${self}/home/systems/core/fonts.nix" # Fonts
-    "${self}/home/systems/core/git.nix" # Git
+    # "${self}/home/systems/core/git.nix" # Git
     "${self}/home/systems/core/network.nix" # Network Config
     "${self}/home/systems/core/nix.nix" # Nix Settings
     "${self}/home/systems/core/sound.nix" # Sound Config

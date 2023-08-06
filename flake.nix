@@ -18,42 +18,62 @@
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , ...
-    } @ inputs:
-    let
-      system = "x86_64-linux";
-      home-manager = inputs.home-manager;
-      username = "mro";
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    home-manager = inputs.home-manager;
 
-      nixos-system = system-module:
-        nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = { inherit self username; };
-          modules = [
-            system-module
-
-            # Home Manager Config
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit username;
-              };
-              home-manager.users.${username} = {
-                imports = [ (import ./nixos/users/mro) ];
-              };
-            }
-
-          ];
+    nixos-system = system-module: hostName: username: monitor:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        # special Args passing
+        specialArgs = {
+          inherit self username;
+          host = {
+            hostName = hostName;
+            mainMonitor = monitor;
+          };
         };
-    in
-    {
-      nixosConfigurations = {
-        nixbin = nixos-system ./machine/nixbin;
+
+        modules = [
+          # TODO add default/common modules
+
+          # host specific module for now
+          system-module
+
+          # Home Manager Config
+          home-manager.nixosModules.home-manager
+          {
+            # use system packages
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            # special Args passing
+            home-manager.extraSpecialArgs = {
+              inherit self username;
+              host = {
+                hostName = hostName;
+                monitor = monitor;
+              };
+            };
+            # start home manager user
+            home-manager.users.${username} = {
+              # home manager modules
+              imports = [
+                ./nixos/users/${username}
+              ];
+            };
+          }
+        ];
       };
+  in {
+    nixosConfigurations = {
+      nixbin = nixos-system ./machine/nixbin "nixbin" "mro" "DP-1";
+
+      # TODO The format will follow same and hardware few packages differ.
+      # nixwork = nixos-system ./machine/nixwork "nixwork" "mro" "HDMI-A-1";
     };
+  };
 }

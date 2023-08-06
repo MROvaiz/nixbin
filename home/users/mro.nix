@@ -11,25 +11,5 @@
   users.users.mro = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      # editor
-      vscode
-
-      # misc
-      tree
-
-      # hyprland required
-      kitty # terminal
-      hyprpaper # wallpaper
-      rofi-wayland # rofi
-
-      # screenshot
-      self.inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.
-      slurp
-
-      # notifications
-      dunst
-      libnotify
-    ];
   };
 }

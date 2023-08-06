@@ -22,5 +22,6 @@
   environment.systemPackages = with pkgs; [
     pulseaudio # For tools like pactl, etc.
     pavucontrol
+    pamixer
   ];
 }

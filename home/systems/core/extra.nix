@@ -13,5 +13,6 @@
     zip
     unzip
     magic-wormhole
+    btop
   ];
 }
