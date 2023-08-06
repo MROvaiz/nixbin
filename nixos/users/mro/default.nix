@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    # "${self}/nixos/desktop/wayland"
+    "${self}/nixos/desktop/wayland"
     "${self}/nixos/system/packages"
   ];
   home = {
