@@ -8,9 +8,4 @@
     enable = true;
     xwayland.enable = true;
   };
-  programs.xwayland.enable = true;
-  environment.sessionVariables = {
-    # Hint electronic apps to use wayland
-    NIXOS_OZONE_WL = "1";
-  };
 }
