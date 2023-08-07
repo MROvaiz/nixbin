@@ -6,8 +6,8 @@
   ...
 }: {
   imports = [
-    "${self}/nixos/desktop/wayland"
-    "${self}/nixos/system/packages"
+    "${self}/nixos/home/desktop/wayland"
+    "${self}/nixos/home/system/packages"
   ];
   home = {
     username = "${username}";
@@ -22,6 +22,8 @@
     # editor
     vscode
 
+    discord
+
     # misc
     tree
 
@@ -32,7 +34,9 @@
 
     # screenshot
     self.inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.
+    grim
     slurp
+    swappy
 
     # notifications
     dunst

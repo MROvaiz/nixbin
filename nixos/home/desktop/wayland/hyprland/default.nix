@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    self.inputs.hyprland.homeManagerModules.default
+    # self.inputs.hyprland.homeManagerModules.default
     ./config.nix
   ];
 

@@ -7,6 +7,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       "$MOD" = "SUPER";
+      "$MODSHIFT" = "$MOD SHIFT";
       monitor = [
         ",preferred,auto,auto"
         "DP-1,2560x1440@144,0x0,1"
@@ -14,8 +15,7 @@
       exec-once = [
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "blueman-applet"
-        "nm-applet --indicator"
+        "blueman-applet & nm-applet --indicator"
         "waybar & hyprpaper"
       ];
       xwayland = {force_zero_scaling = true;};
@@ -47,14 +47,11 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        col.shadow = "rgba(1a1a1aee)";
+        "col.shadow" = "rgba(1a1a1aee)";
       };
       animation = {
         bezier = [
-          "wind, 0.05, 0.9, 0.1, 1.05"
-          "winIn, 0.1, 1.1, 0.1, 1.1"
-          "winOut, 0.3, -0.3, 0, 1"
-          "liner, 1, 1, 1, 1"
+          "myBezier, 0.05, 0.9, 0.1, 1.05"
         ];
         animation = [
           "windows, 1, 7, myBezier"
@@ -106,16 +103,16 @@
         "$MOD, 0, workspace, 0"
 
         # Move to Active window to different workspace with MOD SHIFT [0-9]
-        "$MOD, SHIFT, 1, movetoworkspace, 1"
-        "$MOD, SHIFT, 2, movetoworkspace, 2"
-        "$MOD, SHIFT, 3, movetoworkspace, 3"
-        "$MOD, SHIFT, 4, movetoworkspace, 4"
-        "$MOD, SHIFT, 5, movetoworkspace, 5"
-        "$MOD, SHIFT, 6, movetoworkspace, 6"
-        "$MOD, SHIFT, 7, movetoworkspace, 7"
-        "$MOD, SHIFT, 8, movetoworkspace, 8"
-        "$MOD, SHIFT, 9, movetoworkspace, 9"
-        "$MOD, SHIFT, 0, movetoworkspace, 10"
+        "$MODSHIFT, 1, movetoworkspace, 1"
+        "$MODSHIFT, 2, movetoworkspace, 2"
+        "$MODSHIFT, 3, movetoworkspace, 3"
+        "$MODSHIFT, 4, movetoworkspace, 4"
+        "$MODSHIFT, 5, movetoworkspace, 5"
+        "$MODSHIFT, 6, movetoworkspace, 6"
+        "$MODSHIFT, 7, movetoworkspace, 7"
+        "$MODSHIFT, 8, movetoworkspace, 8"
+        "$MODSHIFT, 9, movetoworkspace, 9"
+        "$MODSHIFT, 0, movetoworkspace, 10"
 
         # Scroll through existing workspaces with MOD + scroll
         "$MOD, mouse_down, workspace, e+1"

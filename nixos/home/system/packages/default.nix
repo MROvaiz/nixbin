@@ -5,6 +5,6 @@
   ...
 }: {
   imports = [
-    "${self}/nixos/system/packages/git.nix" # Git
+    "${self}/nixos/home/system/packages/git.nix" # Git
   ];
 }
