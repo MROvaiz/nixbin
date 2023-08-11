@@ -7,7 +7,7 @@
   # Wayland config
   imports = [
     ./hyprland
-    # ./waybar
+    ./waybar
     # ./swaybg.nix
     # ./swayidle.nix
     # ./swaylock.nix
