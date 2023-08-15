@@ -200,15 +200,13 @@ with colorscheme.colors; ''
 
   #window {
       background: #121B35;
-      padding: 0px 5px 0px 10px;
+      margin: 5px 5px;
+      padding: 8px 5px;
       border-radius: 16px;
-      /*border-left: solid 1px #282738;*/
-      /*border-right: solid 1px #282738;*/
-      margin: 5px 7px;
+      border: solid 0px #cdd6f4;
       font-weight: normal;
       font-style: normal;
-      font-size: 16px;
-      min-width: 600px;
+      min-width: 400px;
   }
 
   #custom-wf-recorder {

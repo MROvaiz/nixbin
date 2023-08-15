@@ -8,9 +8,8 @@
   imports = [
     ./hyprland
     ./waybar
+    ./swayidle_lock
     # ./swaybg.nix
-    # ./swayidle.nix
-    # ./swaylock.nix
     # ./swww.nix
   ];
 

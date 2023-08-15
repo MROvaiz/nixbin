@@ -77,6 +77,7 @@
         "$MOD, Q, exec, kitty"
         "$MOD, C, killactive"
         "$MOD, M, exit"
+        "$MOD, L, exec, swaylock -Ff"
         "$MOD, E, exec, thunar"
         "$MOD, V, togglefloating"
         "$MOD, SPACE, exec, rofi -show drun"

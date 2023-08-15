@@ -126,13 +126,15 @@
     };
 
     network = {
+      interface = "wlo1";
+      format = "{}";
       format-wifi = "󰤨";
-      format-ethernet = " {ifname}: Aesthetic";
-      format-linked = " {ifname} (No IP)";
+      format-ethernet = "󰈀 {ifname}: Aesthetic";
+      format-linked = "󰈀 {ifname} (No IP)";
       format-disconnected = "󰤭";
-      format-alt = " {ifname}: {ipaddr}/{cidr}";
+      format-alt = "󰈀 {ifname}: {ipaddr}/{cidr}";
       tooltip-format = "{essid}";
-      on-click-right = "nm-connection-editor";
+      on-click-right = "kitty nmtui";
     };
 
     tray = {
