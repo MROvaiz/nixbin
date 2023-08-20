@@ -6,9 +6,10 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
-    "${self}/machine/nixbin/hardware-configuration.nix"
+    ./hardware-configuration.nix
     # Home
     "${self}/home"
+    "${self}/nixos/system"
   ];
 
   # Use the systemd-boot EFI boot loader.

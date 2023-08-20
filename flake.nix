@@ -70,10 +70,10 @@
       };
   in {
     nixosConfigurations = {
-      nixbin = nixos-system ./machine/nixbin "nixbin" "mro" "DP-1";
+      nixbin = nixos-system ./nixos/machine/nixbin "nixbin" "mro" "DP-1";
 
       # TODO The format will follow same and hardware few packages differ.
-      # nixwork = nixos-system ./machine/nixwork "nixwork" "mro" "HDMI-A-1";
+      # nixwork = nixos-system ./nixos/machine/nixwork "nixwork" "mro" "HDMI-A-1";
     };
   };
 }
