@@ -9,11 +9,14 @@
     ./hyprland
     ./waybar
     ./swayidle_lock
+    ./themes
     # ./swaybg.nix
     # ./swww.nix
   ];
 
   home.packages = with pkgs; [
+    # wallpaper
+    swww
     # idle/lock
     swaylock-effects
 

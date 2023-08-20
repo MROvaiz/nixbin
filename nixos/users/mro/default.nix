@@ -9,6 +9,7 @@
     "${self}/nixos/home/desktop/wayland"
     "${self}/nixos/home/system/packages"
     "${self}/nixos/home/system/settings"
+    "${self}/nixos/home/system/services"
   ];
   home = {
     username = "${username}";
@@ -30,7 +31,7 @@
 
     # hyprland required
     kitty # terminal
-    hyprpaper # wallpaper
+    # hyprpaper # wallpaper
     rofi-wayland # rofi
 
     # screenshot

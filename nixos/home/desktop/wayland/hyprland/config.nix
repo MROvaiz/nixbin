@@ -3,7 +3,19 @@
   pkgs,
   self,
   ...
-}: {
+}: let
+  wallpaper = builtins.fetchurl {
+    url = "https://raw.githubusercontent.com/MROvaiz/wallpapers/main/earth-above.jpg";
+    sha256 = "15z8imzgi68vy3fv70x3fkvsmm313rfgjmjvbzwi7mar3dcizqaa";
+  };
+  swww-script = pkgs.writeShellScript "swww-script" ''
+    # have pre-start here itself
+    ${pkgs.swww}/bin/swww init &
+
+    # Start Service here
+    ${pkgs.swww}/bin/swww img ${wallpaper}
+  '';
+in {
   wayland.windowManager.hyprland = {
     settings = {
       "$MOD" = "SUPER";
@@ -16,7 +28,8 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "blueman-applet & nm-applet --indicator"
-        "waybar & hyprpaper"
+        "waybar"
+        swww-script
       ];
       xwayland = {force_zero_scaling = true;};
       input = {
