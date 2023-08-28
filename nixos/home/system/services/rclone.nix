@@ -5,13 +5,9 @@
   ...
 }: let
   rclone-script = pkgs.writeShellScript "rclone-script" ''
-    # have pre-start here itself
-    mkdir -p $HOME/gdrive
-    mkdir -p $HOME/.config/rclone/logs
-    mkdir -p $HOME/.data/rclone
-
     # Start Service here
     ${pkgs.rclone}/bin/rclone mount gdrive: $HOME/gdrive \
+    --allow-other \
     --cache-dir $HOME/.data/rclone \
     --vfs-cache-mode writes \
     --dir-cache-time 24h \

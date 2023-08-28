@@ -5,6 +5,10 @@
   ...
 }: {
   imports = [
-    "${self}/nixos/home/system/packages/git.nix" # Git
+    ./git.nix # Git
+    ./kodi.nix # Kodi
+  ];
+  home.packages = with pkgs; [
+    obsidian
   ];
 }
