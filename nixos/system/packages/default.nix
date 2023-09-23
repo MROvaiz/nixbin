@@ -5,4 +5,7 @@
   ...
 }: {
   imports = [];
+  environment.systemPackages = [
+    pkgs.ncdu
+  ];
 }

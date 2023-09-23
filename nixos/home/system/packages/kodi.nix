@@ -26,6 +26,11 @@
             path = "/home/mro/gdrive/AJellyFin/Movies";
             allowsharing = "true";
           }
+          {
+            name = "tv show";
+            path = "/home/mro/gdrive/AJellyFin/TV Show";
+            allowsharing = "true";
+          }
         ];
       };
     };
