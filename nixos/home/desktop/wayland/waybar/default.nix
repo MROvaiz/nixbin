@@ -13,7 +13,7 @@ in {
   home.packages = with pkgs; [python39Packages.requests];
   programs.waybar = {
     enable = true;
-    package = self.inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
+    # package = self.inputs.hyprland.packages.${pkgs.system}.waybar-hyprland;
     settings = waybar_config;
     style = waybar_style;
   };

@@ -20,6 +20,7 @@ in {
     settings = {
       "$MOD" = "SUPER";
       "$MODSHIFT" = "$MOD SHIFT";
+      "$MODALT" = "$MOD ALT";
       monitor = [
         ",preferred,auto,auto"
         "DP-1,2560x1440@144,0x0,1"
@@ -52,10 +53,12 @@ in {
       };
       decoration = {
         rounding = 10;
-        blur = true;
-        blur_size = 3;
-        blur_passes = 1;
-        blur_new_optimizations = false;
+        blur = {
+          size = 3;
+          passes = 1;
+          new_optimizations = false;
+          xray = true;
+        };
 
         drop_shadow = true;
         shadow_range = 4;
@@ -131,6 +134,10 @@ in {
         # Scroll through existing workspaces with MOD + scroll
         "$MOD, mouse_down, workspace, e+1"
         "$MOD, mouse_up, workspace, e-1"
+
+        # Move through existing workspaces
+        "$MODALT, right, workspace, e+1"
+        "$MODALT, left, workspace, e-1"
       ];
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = [

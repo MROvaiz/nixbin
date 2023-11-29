@@ -11,5 +11,7 @@
   home.packages = with pkgs; [
     obsidian
     unrar
+    obs-studio
+    ani-cli
   ];
 }

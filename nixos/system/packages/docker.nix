@@ -4,8 +4,9 @@
   self,
   ...
 }: {
-  imports = [./docker.nix];
+  virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
-    ncdu
+    docker-compose
   ];
 }

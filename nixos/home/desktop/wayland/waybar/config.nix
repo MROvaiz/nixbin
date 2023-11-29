@@ -14,13 +14,13 @@
     margin-left = 0;
     margin-right = 0;
     modules-left = [
-      "custom/launcher"
+      # "custom/launcher"
       "hyprland/window"
       #"custom/playerctl"
       #"custom/playerlabel"
     ];
     modules-center = [
-      "wlr/workspaces"
+      "hyprland/workspaces"
       # "cpu"
       # "memory"
       # "disk"
@@ -45,7 +45,7 @@
       format = "{}";
       max-length = 10;
     };
-    "wlr/workspaces" = {
+    "hyprland/workspaces" = {
       active-only = false;
       all-outputs = true;
       disable-scroll = false;

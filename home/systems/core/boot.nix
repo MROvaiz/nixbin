@@ -16,6 +16,7 @@
       efiInstallAsRemovable = true;
       efiSupport = true;
       useOSProber = true;
+      timeoutStyle = "hidden";
     };
   };
 }
