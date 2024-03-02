@@ -17,15 +17,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
   outputs = {
     self,
     nixpkgs,
+    home-manager,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    home-manager = inputs.home-manager;
 
     nixos-system = system-module: hostName: username: monitor:
       nixpkgs.lib.nixosSystem {
@@ -71,6 +72,7 @@
       };
   in {
     nixosConfigurations = {
+      # function module_name hostname username monitor_name
       nixbin = nixos-system ./nixos/machine/nixbin "nixbin" "mro" "DP-1";
 
       # TODO The format will follow same and hardware few packages differ.

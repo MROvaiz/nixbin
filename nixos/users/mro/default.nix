@@ -7,9 +7,7 @@
 }: {
   imports = [
     "${self}/nixos/home/desktop/wayland"
-    "${self}/nixos/home/system/packages"
-    "${self}/nixos/home/system/settings"
-    "${self}/nixos/home/system/services"
+    "${self}/nixos/home/system"
   ];
   home = {
     username = "${username}";

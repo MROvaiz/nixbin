@@ -191,7 +191,7 @@ in {
         # Utility
         "float,class:^(.blueman-manager-wrapped)$,title:^(Bluetooth Devices)$"
         "size 25% 25%,class:^(.blueman-manager-wrapped)$,title:^(Bluetooth Devices)$"
-        "float,class:^(.openrgb)$,title:^(OpenRGB)$"
+        "float,class:^(openrgb)$,title:^(OpenRGB)$"
       ];
     };
   };
