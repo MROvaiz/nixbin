@@ -37,7 +37,7 @@
     unzip
     magic-wormhole
     btop
-    nvtop-amd
+    nvtopPackages.amd
 
     # Enable sound.
     pavucontrol

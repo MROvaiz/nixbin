@@ -42,7 +42,24 @@ local on_attach = function(_, bufnr)
       }
   }
   
-  require('lspconfig').rnix.setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-  }
+    require('lspconfig').nil_ls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        cmd = { "nil" },
+        settings = {
+        ["nil"] = {
+            nix = {
+            binary = "nix",
+            maxMemoryMB = nil,
+            flake = {
+                autoEvalInputs = false,
+                autoArchive = false,
+                nixpkgsInputName = nil,
+            },
+            },
+            formatting = {
+            command = { "nixfmt", "--quiet" },
+            },
+        },
+        },
+    })
