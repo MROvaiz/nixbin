@@ -30,7 +30,7 @@
     # hyprland required
     kitty # terminal
     # hyprpaper # wallpaper
-    rofi-wayland # rofi
+    # rofi-wayland # rofi
 
     # screenshot
     self.inputs.hyprwm-contrib.packages.${system}.grimblast # Screenshots.

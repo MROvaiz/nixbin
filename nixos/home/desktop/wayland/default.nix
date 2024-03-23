@@ -10,6 +10,8 @@
     ./waybar
     ./swayidle_lock
     ./themes
+    ./rofi
+    ./neovim
     # ./swaybg.nix
     # ./swww.nix
   ];

@@ -11,10 +11,10 @@
     # "${self}/home/systems/core/fonts.nix" # Fonts
     # "${self}/home/systems/core/network.nix" # Network Config
     # "${self}/home/systems/core/nix.nix" # Nix Settings
-    "${self}/home/systems/core/sound.nix" # Sound Config
-    "${self}/home/systems/core/videoDriver.nix" # Video Driver
-    self.inputs.nixos-hardware.nixosModules.common-gpu-amd # AMD Driver
-    "${self}/home/systems/core/virtmanager.nix" # Virt Manager
+    # "${self}/home/systems/core/sound.nix" # Sound Config
+    # "${self}/home/systems/core/videoDriver.nix" # Video Driver
+    # self.inputs.nixos-hardware.nixosModules.common-gpu-amd # AMD Driver
+    # "${self}/home/systems/core/virtmanager.nix" # Virt Manager
     # "${self}/home/systems/core/vscode_server.nix" #vscode server
   ];
   security = {

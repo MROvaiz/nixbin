@@ -44,9 +44,9 @@
     ];
   };
 in {
-  environment.etc."pipewire/pipewire.conf.d/99-input-denoising.conf" = {
-    source = json.generate "99-input-denoising.conf" pw_rnnoise_config;
-  };
+  # environment.etc."pipewire/pipewire.conf.d/99-input-denoising.conf" = {
+  #   source = json.generate "99-input-denoising.conf" pw_rnnoise_config;
+  # };
   # Enable sound.
   security.rtkit.enable = true;
   services.pipewire = {

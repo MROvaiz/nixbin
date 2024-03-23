@@ -37,6 +37,11 @@
     unzip
     magic-wormhole
     btop
+    nvtop-amd
+
+    # Enable sound.
+    pavucontrol
+    pamixer
   ];
 
   # Lutris Setup

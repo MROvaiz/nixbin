@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
-    "${self}/nixos/home/system/settings/virtmanager.nix" # Git
+    ./virtmanager.nix # Git
+    ./sound.nix # Git
   ];
 }
