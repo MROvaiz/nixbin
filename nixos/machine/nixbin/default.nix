@@ -7,8 +7,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # Home
-    "${self}/home"
     "${self}/nixos/system"
   ];
 
